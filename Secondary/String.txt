@@ -1,0 +1,220 @@
+String
+--------
+Any sequence of characters within either single quotes or double quotes is considered as a String
+ex:
+s="krish"
+s='krish'
+
+How to define multi-line String literals
+-------------------------------------------
+We can define multi-line String literals by using triple single or double quotes
+s='''krishna
+     maram'''
+
+Creation of String:
+---------------------------
+s='krishna'
+s="krishna"
+
+
+How to access characters of a String:
+==========================================
+1.by using index:
+----------------------
+Python supports bothe +ve and -ve index
++ve index means left to right(Forward direction)
+-ve index means right to left(Backward direction)
+s="krish"
+print(s[0])
+print(s[-1])
+2.by using slice operator:
+----------------------------
+syntax:
+s[beginindex:endindex:step]
+beginindex: from where we have to consider slice(substring)
+endindex: we have to terminate the slice(substring) at endindex-1
+step: incremented value
+ex:
+s="Python is simple programming language"
+s[1:7:1]
+Note
+-----
+If you are not specifying begin index then it will consider from beginning of the String. If you are not specifying end index then it will consider
+up to end of the String,the default value for step is 1
+
+Mathematical operators for String
+---------------------------------------
+1.+ operator for concatination
+2.* operator for repetition
+ex:
+print("krish"+"maram")
+print("krish"*2)
+Note
+----
+To use + operator for Strings, compulsory both arguments should be str type
+To use * operator for Strings, compulsory one argument should be str and other argument should be int
+
+
+Built-in functions
+====================
+We can use len() function to find the number of characters present in the String
+ex:
+s='krish'
+print(len(s))
+
+
+Checking Membership
+------------------------
+You can check whether the character or string is the member of another string or not by using in and not in operators
+s="krish"
+print('k' in s)
+print('k' not in s)
+
+Comparison of Strings
+--------------------------
+You can use comparison operators(<,<=,>,>=) and equality operators(==,!=) for strings
+Comparison will be performed based on the alphabetical order 
+s1="krish"
+s2="maram"
+print( s1 > s2)
+
+
+
+Removing spaces from the String
+--------------------------------
+You can use the following three methods
+1.rstrip()=>to remove spaces at right hand side
+2.lstrip()=>to remove spaces at left hand side
+3.strip()=>to remove spaces both sides
+ex:
+s="   krish maram"
+print(s.strip())
+
+
+Finding Substrings
+========================
+You can use the following 4 methods
+for forward direction
+---------------------
+1.find()
+2.index()
+for backward direction
+-----------------------
+3.rfind()
+4.rindex()
+
+1.find()
+--------
+syntax:
+s.find(substring)
+Returns index of first occurence of the given substring. If it is not available then we will get -1
+ex:
+s="python is simple programming language"
+print(s.find("simple")
+print(s.find("krish")
+Note:
+By default find() method can search total string. We can also specify the boundaries to search
+s.find(substring,begin,end)
+print(s.find(i,2,7)
+2.index()
+----------
+index() method is exactly same as find() method except that if the specified substring is not available the we will get ValueError
+
+
+
+Counting Substrings in the given String
+--------------------------------------------
+You can find the number of occurences of substring present in the given string by using count() method 
+1.s.count(substring)=>it will search through out the string
+2.s.count(substring,begin,end)=>it will search from begin index to end-1 index
+ex:
+s="krishnasoftkrishnasoft"
+print(s.count("soft"))
+print(s.count("soft",8,15))
+print(s.count("soft",8,len(s))
+
+Replacing a String with another String:
+------------------------------------------
+s.replace(oldstring,newstring)
+inside s,every occurence of oldstring will be replaced with newstring
+
+ex1:
+s="learning python is very difficult"
+s1=s.replace("difficult","easy")
+print(s,id(s))
+print(s1,id(s1))
+String object is immutable then how do you perform replace() operation on string object?
+Here new object will be created and action will be perormed only on new object and changes won't happen on existing object
+
+
+Splitting of Strings:
+-------------------------
+You can split the given String according to specified seperator by using split() method
+s.split(seperator) =>here default seperator is space
+ex1:
+s="1991-03-24"
+l=s.split('-')
+print(l)
+for x in l:
+  print(x)
+
+What is the difference between sep='' and s.split()?
+=>split() is applicable related to string concept
+=>sep is applicable related to print() function    print(a,b,c,d)
+
+
+Joining of Strings
+-------------------------------
+You can join group of strings(list or tuple) wrt the given seperator using join() method
+syntax:
+s=seperator.join(group of strings)
+
+l=["krishna","maram"]
+s='-'.join(l)
+print(s)
+
+Changing cases of a String:
+-------------------------------
+s="Krishna maram software Solutions"
+print(s.lower())
+print(s.upper())
+print(s.swapcase())
+print(s.title())
+print(s.capitalize())
+
+
+Checking starting and ending part of String
+-----------------------------------------------
+You have two methods 
+1.s.startswith(substring)
+2.s.endswith(substring)
+ex:
+s="Krishna maram software Solutions"
+s.startswith("Krishna")
+s.endswith("solutions")
+
+To check type of character present in a String
+-------------------------------------------------
+Python contains the folloing methods for this purpose
+1.isalpha()
+2.isdigit()
+3.isalnum()
+4.islower()
+5.isupper()
+6.istitle()
+7.isspace()
+
+
+
+
+Formatting the Strings
+-------------------------
+You can format the Strings with variable values by using replacement operator {} and format() method
+name="krish"
+age="28"
+print("my name is {} and age is {}".format(name,age)
+
+
+
+
+
