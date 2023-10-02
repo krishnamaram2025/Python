@@ -1,3 +1,0 @@
-source code => compiler => byte code => pvm => binary code => OS => output
-
-interpreter = compiler + byte code + pvm
